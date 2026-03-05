@@ -1,4 +1,8 @@
-Crear el plan de proyecto #3
+# Crear el plan de proyecto
+**Proyecto:** Sistema de Gestión de Citas con Especialistas  
+**Issue:** #3  
+**Sprint:** Identificación de requisitos  
+**Fecha:** 05/03/2026  
 
 # Plan de Proyecto
 ## Sistema de Gestión de Citas para Médicos Especialistas
@@ -129,3 +133,4 @@ Este plan de proyecto establece la base para el desarrollo estructurado del sist
 
 
 ---
+
