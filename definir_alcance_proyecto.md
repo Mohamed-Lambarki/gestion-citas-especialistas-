@@ -1,3 +1,5 @@
+# Definir el alcance del proyecto
+
 # Proyecto: Sistema de Gestión de Citas Médicas (Especialistas)
 
 ## Documento de Alcance - Reunión Inicial
@@ -9,6 +11,7 @@
 **Responsable (Assignee):** `@Hmz-ALK`
 **Colaborador:** `@yussi-pixel`
 **Propietario (Owner):** `@Mohamed-Lambarki`
+**Issue:** #1
 
 ---
 
@@ -74,4 +77,5 @@ A continuación, se detalla el resumen del alcance acordado durante la reunión.
 | :--- | :--- | :--- |
 | 4 days ago | `@yussi-pixel` | Abrió la issue, asignó a `@Hmz-ALK` y añadió al hito. |
 | 17 hours ago | `@Hmz-ALK` | Anunció la redacción del borrador del alcance. |
+
 | 16 hours ago | `@Mohamed-Lambarki` | Validó el documento y cerró la issue como completada. |
