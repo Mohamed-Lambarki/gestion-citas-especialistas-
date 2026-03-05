@@ -1,0 +1,99 @@
+# Procesos Actuales de Gestión de Citas
+**Proyecto:** Sistema de Gestión de Citas con Especialistas  
+**Issue:** #7  
+**Sprint:** Inicio y Planificación  
+**Fecha:** 05/03/2026  
+
+---
+
+## 1. Introducción
+
+Este documento recoge el análisis de los procesos actuales de gestión de citas del hospital, obtenido mediante entrevistas con el personal administrativo y médico. El objetivo es identificar los flujos de trabajo existentes y sus puntos débiles para orientar el desarrollo del nuevo sistema.
+
+---
+
+## 2. Métodos de gestión actuales
+
+| Método | Uso actual | Departamentos |
+|--------|-----------|---------------|
+| Teléfono | Principal método de solicitud de citas | Todos |
+| Papel / Agenda física | Registro de citas de algunos especialistas | Traumatología, Cardiología |
+| Software legacy (ClinicSoft v2.1) | Gestión parcial de citas | Administración central |
+| Presencial en mostrador | Pacientes sin acceso digital | Urgencias, Medicina interna |
+
+---
+
+## 3. Flujo actual del proceso de cita
+
+### 3.1 Solicitud de cita por parte del paciente
+```
+Paciente llama por teléfono
+        ↓
+Administrativo coge el teléfono (tiempo espera medio: 12 min)
+        ↓
+Administrativo consulta agenda del especialista (papel o ClinicSoft)
+        ↓
+Se asigna fecha y hora disponible
+        ↓
+Administrativo anota cita (papel + sistema si está disponible)
+        ↓
+Paciente recibe confirmación verbal por teléfono
+```
+
+### 3.2 Cancelación o modificación de cita
+```
+Paciente llama por teléfono
+        ↓
+Administrativo localiza la cita en el sistema o agenda
+        ↓
+Se cancela/modifica manualmente
+        ↓
+El hueco liberado NO se reasigna automáticamente
+        ↓
+Pérdida de disponibilidad del especialista
+```
+
+### 3.3 Recordatorio de cita
+- Actualmente **no existe sistema de recordatorio automático**
+- En algunos casos el administrativo llama manualmente 1 día antes
+- Tasa de "no-show" (paciente no presentado): ~23%
+
+---
+
+## 4. Puntos débiles identificados
+
+| ID | Problema | Impacto | Prioridad |
+|----|---------|---------|-----------|
+| PD-01 | Tiempo de espera telefónica elevado (12 min media) | Alto | Alta |
+| PD-02 | Doble registro (papel + sistema) genera errores y duplicados | Alto | Alta |
+| PD-03 | No hay recordatorios automáticos → alto índice de no-show (23%) | Alto | Alta |
+| PD-04 | Cancelaciones no reasignan el hueco automáticamente | Medio | Media |
+| PD-05 | El software ClinicSoft no está integrado con todos los departamentos | Alto | Alta |
+| PD-06 | Sin acceso digital para el paciente (no hay app ni web) | Medio | Media |
+| PD-07 | No hay historial unificado de citas por paciente | Medio | Media |
+| PD-08 | Dificultad para generar informes y estadísticas de ocupación | Bajo | Baja |
+
+---
+
+## 5. Volumen de citas actual
+
+| Indicador | Valor aproximado |
+|-----------|-----------------|
+| Citas gestionadas por día | ~150 |
+| Llamadas telefónicas diarias | ~200 |
+| Tasa de cancelación | 18% |
+| Tasa de no-show | 23% |
+| Especialidades con agenda propia en papel | 4 de 12 |
+
+---
+
+## 6. Conclusiones
+
+El proceso actual presenta ineficiencias significativas derivadas de la fragmentación de herramientas y la ausencia de automatización. Los puntos críticos a resolver en el nuevo sistema son:
+
+1. **Canal digital** para que el paciente gestione sus citas sin necesidad de llamar.
+2. **Recordatorios automáticos** para reducir el índice de no-show.
+3. **Sistema unificado** que integre todos los departamentos y elimine el doble registro en papel.
+4. **Reasignación automática** de huecos liberados por cancelaciones.
+
+Este análisis servirá como base para la definición de requisitos del sistema en el Sprint 2.
