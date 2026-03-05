@@ -1,3 +1,5 @@
+Crear el plan de proyecto #3
+
 # Plan de Proyecto
 ## Sistema de Gestión de Citas para Médicos Especialistas
 
@@ -124,5 +126,6 @@ Los entregables principales del proyecto serán:
 La implementación del sistema de gestión de citas permitirá mejorar significativamente la organización del hospital, optimizar el tiempo de los especialistas y ofrecer una mejor experiencia a los pacientes.
 
 Este plan de proyecto establece la base para el desarrollo estructurado del sistema.
+
 
 ---
