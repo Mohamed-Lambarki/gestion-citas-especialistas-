@@ -1,0 +1,93 @@
+# Matriz de Trazabilidad
+**Proyecto:** Sistema de Gestión de Citas con Especialistas  
+**Issue:** #8  
+**Sprint:** Validación y documentación  
+**Fecha:** 05/03/2026  
+
+---
+
+## 1. Introducción
+
+Este documento relaciona los requisitos del sistema con los casos de uso correspondientes, permitiendo verificar que todos los requisitos están cubiertos y que cada caso de uso tiene justificación en un requisito.
+
+---
+
+## 2. Requisitos del sistema
+
+| ID | Requisito | Tipo | Prioridad |
+|----|-----------|------|-----------|
+| RF-01 | El paciente puede solicitar una cita con un especialista | Funcional | Alta |
+| RF-02 | El paciente puede cancelar o modificar una cita existente | Funcional | Alta |
+| RF-03 | El sistema envía recordatorios automáticos de cita | Funcional | Alta |
+| RF-04 | El administrativo puede gestionar la agenda de especialistas | Funcional | Alta |
+| RF-05 | El sistema reasigna automáticamente huecos por cancelación | Funcional | Media |
+| RF-06 | El médico puede consultar su agenda de citas | Funcional | Alta |
+| RF-07 | El sistema genera informes de ocupación y estadísticas | Funcional | Baja |
+| RF-08 | El paciente puede consultar el historial de sus citas | Funcional | Media |
+| RNF-01 | El sistema debe estar disponible 24/7 | No funcional | Alta |
+| RNF-02 | El tiempo de respuesta no debe superar los 2 segundos | No funcional | Media |
+| RNF-03 | El sistema debe cumplir con la normativa RGPD | No funcional | Alta |
+| RNF-04 | La interfaz debe ser accesible (WCAG 2.1 nivel AA) | No funcional | Media |
+
+---
+
+## 3. Casos de uso
+
+| ID | Caso de uso | Actor principal |
+|----|-------------|----------------|
+| CU-01 | Solicitar cita | Paciente |
+| CU-02 | Cancelar cita | Paciente / Administrativo |
+| CU-03 | Modificar cita | Paciente / Administrativo |
+| CU-04 | Enviar recordatorio | Sistema |
+| CU-05 | Gestionar agenda de especialista | Administrativo |
+| CU-06 | Reasignar hueco libre | Sistema |
+| CU-07 | Consultar agenda | Médico especialista |
+| CU-08 | Generar informe de ocupación | Administrativo / Dirección |
+| CU-09 | Consultar historial de citas | Paciente |
+| CU-10 | Autenticarse en el sistema | Paciente / Médico / Administrativo |
+
+---
+
+## 4. Matriz de trazabilidad Requisitos ↔ Casos de uso
+
+| | CU-01 | CU-02 | CU-03 | CU-04 | CU-05 | CU-06 | CU-07 | CU-08 | CU-09 | CU-10 |
+|--------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
+| **RF-01** | ✅ | | | | | | | | | ✅ |
+| **RF-02** | | ✅ | ✅ | | | | | | | ✅ |
+| **RF-03** | | | | ✅ | | | | | | |
+| **RF-04** | | | | | ✅ | | | | | ✅ |
+| **RF-05** | | | | | | ✅ | | | | |
+| **RF-06** | | | | | | | ✅ | | | ✅ |
+| **RF-07** | | | | | | | | ✅ | | ✅ |
+| **RF-08** | | | | | | | | | ✅ | ✅ |
+| **RNF-01** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **RNF-02** | ✅ | ✅ | ✅ | | ✅ | | ✅ | | ✅ | ✅ |
+| **RNF-03** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **RNF-04** | ✅ | ✅ | ✅ | | ✅ | | ✅ | | ✅ | ✅ |
+
+---
+
+## 5. Cobertura
+
+| Requisito | Cubierto por casos de uso | Estado |
+|-----------|--------------------------|--------|
+| RF-01 | CU-01, CU-10 | ✅ Cubierto |
+| RF-02 | CU-02, CU-03, CU-10 | ✅ Cubierto |
+| RF-03 | CU-04 | ✅ Cubierto |
+| RF-04 | CU-05, CU-10 | ✅ Cubierto |
+| RF-05 | CU-06 | ✅ Cubierto |
+| RF-06 | CU-07, CU-10 | ✅ Cubierto |
+| RF-07 | CU-08, CU-10 | ✅ Cubierto |
+| RF-08 | CU-09, CU-10 | ✅ Cubierto |
+| RNF-01 | Todos los CU | ✅ Cubierto |
+| RNF-02 | CU-01, 02, 03, 05, 07, 09, 10 | ✅ Cubierto |
+| RNF-03 | Todos los CU | ✅ Cubierto |
+| RNF-04 | CU-01, 02, 03, 05, 07, 09, 10 | ✅ Cubierto |
+
+**Resultado: 100% de requisitos cubiertos ✅**
+
+---
+
+## 6. Conclusiones
+
+La matriz confirma que todos los requisitos funcionales y no funcionales identificados están cubiertos por al menos un caso de uso. El CU-10 (autenticación) es transversal a casi todos los casos de uso, por lo que debe ser implementado como primera prioridad técnica.
